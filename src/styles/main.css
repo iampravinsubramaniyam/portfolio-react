@@ -1,0 +1,377 @@
+
+
+
+.main{
+    margin-top: 100px;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+
+.cloud-container{
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cloud-container img{
+    width: auto;
+    height: 50%;
+}
+
+.resume-container{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-title{
+    position: absolute;
+    left: 35%;
+    top: 45%;
+    font-size: 14px;
+    color: #134B70;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.resume-cloud{
+    width: 160px;
+    height: 100px;
+    position: relative;
+    border-radius: 50px;
+}
+
+.resume-container a img{
+    width: auto;
+    height: 100%;
+}
+
+.wheel-container{
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.wheel{
+    width: 140px;
+    opacity: 0.4;
+
+    z-index:20;
+    animation:rotation 10s infinite linear;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform:rotate(360deg);
+    }
+}
+
+.boat{
+    width: 20%;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 100px;
+    left:80px;
+    z-index: 2;
+    transition: 2s;
+    transform: rotate(0deg);
+    animation: swing 4s  infinite linear;
+}
+
+@keyframes swing {
+    0%{
+        transform: rotate(0deg);
+        bottom: 100px;
+        left: 80px;
+    }25%{
+        transform: rotate(5deg);
+        bottom: 90px;
+        left: 85px;
+    }50%{
+        transform: rotate(0deg);
+        bottom: 80px;
+        left: 90px;
+    }75%{
+        transform: rotate(-5deg);
+        bottom: 90px;
+        left: 85px;
+    }100%{
+        transform: rotate(0deg);
+        bottom: 100px;
+        left: 80px;
+    }
+}
+
+.sea{
+    width: 100%;
+    height: 230px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: wave 4s  infinite linear;
+}
+
+@keyframes wave {
+    0%{
+        height: 230px;
+    }50%{
+        height: 200px;
+    }100%{
+        height: 230px;
+    }
+}
+
+
+.autospell-warper{
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    left: 350px;
+    bottom: 250px;
+}
+
+.autospell-warper h1{
+    opacity: 0.5;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.autospell{
+    font-size: 18px;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .cloud-container{
+        right: 0px;
+        width: 350px;
+    }
+
+    .wheel-container{
+        left: 0px;
+    }
+
+    .wheel{
+        width: 100px;
+    }
+
+    .boat{
+        left: 0px;
+        width: 22%;
+    }
+
+    @keyframes swing {
+        0%{
+            transform: rotate(0deg);
+            bottom: 100px;
+            left: 125px;
+        }25%{
+            transform: rotate(8deg);
+            bottom: 90px;
+            left: 130px;
+        }50%{
+            transform: rotate(0deg);
+            bottom: 80px;
+            left: 135px;
+        }75%{
+            transform: rotate(-8deg);
+            bottom: 90px;
+            left: 130px;
+        }100%{
+            transform: rotate(0deg);
+            bottom: 100px;
+            left: 125px;
+        }
+    }
+
+    .autospell-warper{
+        bottom: 200px;
+        left: 300px;
+    }
+
+    .sea{
+        width: 150%;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .dolphin{
+        display: none;
+    }
+
+    .wheel-container{
+        width: 320px;
+        left: 30px;
+    }
+
+    .boat{
+        left: 0px;
+        width: 24%;
+    }
+
+    .cloud-container{
+        right: 0px;
+        width: 300px;
+        top: 0px;
+    }
+
+    @keyframes swing {
+        0%{
+            transform: rotate(0deg);
+            bottom: 100px;
+            left: 105px;
+        }25%{
+            transform: rotate(8deg);
+            bottom: 90px;
+            left: 110px;
+        }50%{
+            transform: rotate(0deg);
+            bottom: 80px;
+            left: 115px;
+        }75%{
+            transform: rotate(-8deg);
+            bottom: 90px;
+            left: 110px;
+        }100%{
+            transform: rotate(0deg);
+            bottom: 100px;
+            left: 105px;
+        }
+    }
+
+
+    .autospell-warper{
+        left: 320px;
+        bottom: 150px;
+    }
+
+    
+  }
+
+  @media screen and (max-width: 576px){
+    .wheel-container{
+        top: 0px;
+        left: 0px;
+        height: 180px;
+    }
+
+    
+    .autospell-warper{
+        left: 200px;
+        bottom: 190px;
+    }
+
+    .sea{
+        left: -28%;
+    }
+
+    .cloud-container{
+        width: 200px;
+        right: 10px;
+    }
+
+    .cloud-container img{
+        height: 25%;
+    }
+
+    .resume-cloud{
+        width: 120px;
+        height: 60px;
+    }
+
+    .download-title{
+        left: 16%;
+    }
+  }
+
+  @media screen and (max-width: 576px){
+    .cloud-container{
+        top: -45px
+    }
+
+    .wheel{
+        width: 80px;
+    }
+
+    .autospell-warper{
+        left: 60px;
+        bottom: 240px;
+    }
+
+    .boat{
+        width: 180px;
+    }
+
+    .sea{
+        left: -30%;
+    }
+
+    @keyframes swing {
+        0%{
+            transform: rotate(0deg);
+            bottom: 80px;
+            left: 80px;
+        }25%{
+            transform: rotate(8deg);
+            left: 85px;
+            bottom: 85px;
+        }50%{
+            transform: rotate(0deg);
+            left: 75px;
+            bottom: 90px;
+        }75%{
+            transform: rotate(-8deg);
+            left: 80px;
+            bottom: 85px;
+        }100%{
+            transform: rotate(0deg);
+            left: 80px;
+            bottom: 80px;
+        }
+    }
+
+    .cloud-container{
+        right: 0px;
+        top: 5%;
+    }
+
+    @keyframes wave {
+        0%{
+            height: 190px;
+        }50%{
+            height: 160px;
+        }100%{
+            height: 190px;
+        }
+    }
+
+    .cloud-container img:nth-child(2){
+        display: none;
+    }
+
+    .wheel-container{
+        height: 120px;
+    }
+  }
