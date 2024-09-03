@@ -21,7 +21,7 @@ const AutoType = () => {
       ]}
       wrapper="span"
       speed={5}
-      style={{ fontSize: '1.2em', display: 'inline-block', color: '#6A9C89', fontWeight: "500" }}
+      style={{ fontSize: '1.2em', display: 'inline-block', color: 'rgb(14, 140, 157)', fontWeight: "500" }}
       repeat={Infinity}
     />
   );

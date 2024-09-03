@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import "../styles/about.css"
 import {skills, bubbles} from '../data/data.js'
 import stone from "../images/about/wall.png"
 import {useInView} from 'framer-motion'
 import { useRef } from 'react'
+import DataContext from '../context/DataContext.js'
 
 
 const About = () => {
+  const {aboutStatus} = useContext(DataContext);
 
   const about = useRef(null)
   const tech = useRef(null)
@@ -14,6 +16,11 @@ const About = () => {
   const aboutContainer = useInView(about);
   const techSkills = useInView(tech);
 
+  useEffect(()=>{
+    if(aboutContainer){
+      aboutStatus();
+    }
+  },[aboutContainer])
 
 
   return (

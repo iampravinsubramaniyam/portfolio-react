@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "../styles/project.css"
 import points from '../images/projects/points.png'
 import {projects} from '../data/data.js'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import DataContext from '../context/DataContext.js'
 
 const Projects = () => {
+  const {projectStatus} = useContext(DataContext);
 
   const project = useRef(null)
   const projectInView = useInView(project)
@@ -14,6 +16,12 @@ const Projects = () => {
     backdropFilter: "blur(6px)",
     webkitBackdropFilter: "blur(6px)"
   }
+
+  useEffect(()=>{
+    if(projectInView){
+      projectStatus()
+    }
+  },[projectInView])
 
 
   return (

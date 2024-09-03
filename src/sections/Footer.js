@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import "../styles/footer.css"
 import { domains,details } from '../data/data'
 import {useInView} from 'framer-motion'
 import { useRef } from 'react'
+import DataContext from '../context/DataContext'
 
 const Footer = () => {
-
+  const {contactStatus} = useContext(DataContext)
   const contact = useRef(null)
   const contactInView = useInView(contact)
+
+  useEffect(()=>{
+    if(contactInView){
+      contactStatus()
+    }
+  },[contactInView])
 
 
   return (

@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import "../styles/profiles.css"
 import mountain from '../images/profiles/mountain.png'
 import {profiles,achiements} from '../data/data'
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-
-
-
+import DataContext from '../context/DataContext';
 
 
 const Profiles = () => {
 
+  const {profileStatus} = useContext(DataContext)
+
   const profilesContainer = useRef(null)
   const profilesContainerInView = useInView(profilesContainer);
+
+  useEffect(()=>{
+    if(profilesContainerInView){
+      profileStatus()
+    }
+  },[profilesContainerInView])
 
   return (
     <div className='profiles' id = 'profiles'>

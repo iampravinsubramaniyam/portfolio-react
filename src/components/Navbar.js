@@ -7,8 +7,9 @@ import { IoCloseSharp } from "react-icons/io5";
 import useWindowDimensions from '../config/useWindowDimensions.js'
 
 
+
 const Navbar = () => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
 
   const [menuStyles, setMenuStyles] = useState({
@@ -49,6 +50,8 @@ const Navbar = () => {
     }
     setMenuStyles(newMenuStyle);
   }
+
+
 
   return (
     <div className='navbar'>

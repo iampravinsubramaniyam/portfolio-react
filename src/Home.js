@@ -6,16 +6,22 @@ import About from './sections/About'
 import Profiles from './sections/Profiles'
 import Projects from './sections/Projects'
 import Footer from './sections/Footer'
+import Navigationbar from './components/Navigationbar'
+import { DataProvider } from "./context/DataContext"
+
 
 const Home = () => {
   return (
     <div className='home'>
-        <Header/>
-        <Main/>
-        <About/>
-        <Profiles/>
-        <Projects/>
-        <Footer/>
+        <DataProvider>
+          <Header/>
+          <Main/>
+          <About/>
+          <Profiles/>
+          <Projects/>
+          <Footer/>
+          <Navigationbar/>
+        </DataProvider>
     </div>
   )
 }
