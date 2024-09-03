@@ -5,6 +5,7 @@ import stone from "../images/about/wall.png"
 import {useInView} from 'framer-motion'
 import { useRef } from 'react'
 import DataContext from '../context/DataContext.js'
+import BubblesAnimation from '../components/BubblesAnimation.js'
 
 
 const About = () => {
@@ -21,6 +22,8 @@ const About = () => {
       aboutStatus();
     }
   },[aboutContainer])
+
+
 
 
   return (
@@ -57,6 +60,7 @@ const About = () => {
       </div>
 
       <img className = 'stone-wall' src={stone} alt="stone" />
+        <BubblesAnimation/>
     </div>
   )
 }

@@ -10,11 +10,10 @@
 
 
 .profiles-container{
-    width: 80%;
+    width: 90%;
     height: 50%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    justify-content: space-between;
     z-index: 1;
 }
 
@@ -97,6 +96,7 @@
     overflow: hidden;
     gap: 20px;
     padding: 30px;
+    margin-left: 100px;
 }
 
 .achivement-wraper h1{
@@ -182,6 +182,12 @@
 
 }
 
+@media screen and (max-width: 772px){
+    .achivement-wraper{
+        margin-left: 40px;
+    }
+}
+
 @media screen and (max-width: 478px) {
     
     .achivement-wraper h1{
@@ -192,5 +198,9 @@
         height: auto;
         padding-bottom: 20px;
         background-color: #85d1ea2c;
+    }
+
+    .achivement-wraper{
+        margin-left: 0px;
     }
 }

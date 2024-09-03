@@ -129,7 +129,6 @@ const skills = [
       styles:{
         width: "30px",
         height: "30px",
-        transitionDelay: "0.6s"
       }
     },
     {
@@ -137,8 +136,6 @@ const skills = [
       styles:{
         width: "60px",
         height: "60px",
-        transitionDelay: "1s"
-
       }
     },
     {
@@ -146,8 +143,6 @@ const skills = [
       styles:{
         width: "40px",
         height: "40px",
-        transitionDelay: "0.8s"
-
       }
     },
     {
@@ -155,8 +150,6 @@ const skills = [
       styles:{
         width: "80px",
         height: "80px",
-        transitionDelay: "0.2s"
-
       }
     },
     {
@@ -164,7 +157,6 @@ const skills = [
       styles:{
         width: "20px",
         height: "20px",
-        transitionDelay: "0.7s"
 
       }
     },
@@ -173,8 +165,6 @@ const skills = [
       styles:{
         width: "50px",
         height: "50px",
-        transitionDelay: "0.1s"
-
       }
     },
     {
@@ -182,8 +172,6 @@ const skills = [
       styles:{
         width: "30px",
         height: "30px",
-        transitionDelay: "0.4s"
-
       }
     },
     {
@@ -191,8 +179,6 @@ const skills = [
       styles:{
         width: "60px",
         height: "60px",
-        transitionDelay: "0.2s"
-
       }
     },
     {
@@ -200,8 +186,6 @@ const skills = [
       styles:{
         width: "80px",
         height: "80px",
-        transitionDelay: "0.7s"
-
       }
     },
     {
@@ -209,8 +193,6 @@ const skills = [
       styles:{
         width: "30px",
         height: "30px",
-        transitionDelay: "0.1s"
-
       }
     },
     {
@@ -218,7 +200,6 @@ const skills = [
       styles:{
         width: "60px",
         height: "60px",
-        transitionDelay: "0.3s"
       }
     },
     {
@@ -226,8 +207,6 @@ const skills = [
       styles:{
         width: "35px",
         height: "35px",
-        transitionDelay: "0.6s"
-
       }
     },
     {
@@ -235,7 +214,76 @@ const skills = [
       styles:{
         width: "70px",
         height: "70px",
-        transitionDelay: "0.2s"
+      }
+    }
+    ,
+    {
+      img: bubble,
+      styles:{
+        width: "30px",
+        height: "30px",
+      }
+    }
+    ,
+    {
+      img: bubble,
+      styles:{
+        width: "45px",
+        height: "45px",
+      }
+    }
+    ,
+    {
+      img: bubble,
+      styles:{
+        width: "60px",
+        height: "60px",
+      }
+    }
+    ,
+    {
+      img: bubble,
+      styles:{
+        width: "50px",
+        height: "50px",
+      }
+    }
+    ,
+    {
+      img: bubble,
+      styles:{
+        width: "60px",
+        height: "60px",
+      }
+    }
+    ,
+    {
+      img: bubble,
+      styles:{
+        width: "20px",
+        height: "20px",
+      }
+    }
+    ,
+    {
+      img: bubble,
+      styles:{
+        width: "30px",
+        height: "30px",
+      }
+    },
+    {
+      img: bubble,
+      styles:{
+        width: "40px",
+        height: "40px",
+      }
+    },
+    {
+      img: bubble,
+      styles:{
+        width: "60px",
+        height: "60px",
       }
     }
   ]
