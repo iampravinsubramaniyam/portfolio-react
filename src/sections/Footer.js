@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import "../styles/footer.css"
 import { domains,details } from '../data/data'
 import {useInView} from 'framer-motion'
@@ -10,11 +10,9 @@ const Footer = () => {
   const contact = useRef(null)
   const contactInView = useInView(contact)
 
-  useEffect(()=>{
-    if(contactInView){
-      contactStatus()
-    }
-  },[contactInView])
+  if(contactInView){
+    contactStatus();
+  }
 
 
   return (
@@ -24,8 +22,8 @@ const Footer = () => {
           <div className="domain-wraper">
             <h1>I'm Interested About</h1>
             <ul className="domain-box">
-              {domains.map(domain =>(
-                <li className='domain-name'>{domain}</li>
+              {domains.map((domain,index) =>(
+                <li key = {index} className='domain-name'>{domain}</li>
               ))}
             </ul>
           </div>
@@ -35,8 +33,8 @@ const Footer = () => {
           <div className="contact-wraper">
             <h1>Contact Me</h1>
             <ul className="contact-box">
-              {details.map(data => (
-                <li style={contactInView?{top: "0px"}:{top: "80px"}}><a href={data.link} target='blank'>{data.logo}</a></li>
+              {details.map((data,index) => (
+                <li key = {index} style={contactInView?{top: "0px"}:{top: "80px"}}><a href={data.link} target='blank'>{data.logo}</a></li>
               ))}
             </ul>
           </div>

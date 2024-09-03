@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import "../styles/profiles.css"
 import mountain from '../images/profiles/mountain.png'
 import {profiles,achiements} from '../data/data'
@@ -14,11 +14,11 @@ const Profiles = () => {
   const profilesContainer = useRef(null)
   const profilesContainerInView = useInView(profilesContainer);
 
-  useEffect(()=>{
-    if(profilesContainerInView){
-      profileStatus()
-    }
-  },[profilesContainerInView])
+
+  if(profilesContainerInView){
+    profileStatus()
+  }
+
 
   return (
     <div className='profiles' id = 'profiles'>
@@ -26,8 +26,9 @@ const Profiles = () => {
       <div className="profiles-container">
         <div className="profiles-wraper">
             <ul className="myProfiles" ref = {profilesContainer}>
-                {profiles.map(profile => (
+                {profiles.map((profile,index) => (
                   <li 
+                    key ={index}
                     style={profilesContainerInView? {top: "0px"}: {top: "120px"}}
                     className="link-wraper">
                     <a href={profile.linkTo}>{profile.logo}</a>
@@ -39,8 +40,8 @@ const Profiles = () => {
         <div className="achivement-wraper" style={profilesContainerInView? {transform: "translateX(0px)"}: {transform: "translateX(200px)"}}>
               <h1>Achivements</h1>
               <ul className="achivement-content">
-                  {achiements.map(data => (
-                    <li>{data+"."}</li>
+                  {achiements.map((data,index) => (
+                    <li key = {index}>{data+"."}</li>
                   ))}
               </ul>
         </div>

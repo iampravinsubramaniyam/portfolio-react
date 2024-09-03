@@ -28,7 +28,7 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollpos]);
+  });
 
   let headerStyle = {
     top: `${topScale}px`

@@ -56,8 +56,8 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <Link className = 'logo' style = {{color:"rgb(14, 140, 157)", cursor: "pointer"}} to = "home" smooth = {true} offset = {-100} duration = {500}>Praveen.Fl</Link>
-      <ul className='navbar-link-container'>{options.map(linkData => (
-        <li>
+      <ul className='navbar-link-container'>{options.map((linkData,index) => (
+        <li key = {index}>
             <Link className = 'navbar-link' to = {linkData.linkTo} smooth = {true} offset = {-100} duration = {500}>{linkData.name}</Link>
         </li>
       ))}
@@ -69,8 +69,8 @@ const Navbar = () => {
       />
 
       <div className="drop-menu-container" style = {menuStyles}>
-        <ul className='drop-menu-wrapper'>{options.map(linkData => (
-            <li>
+        <ul className='drop-menu-wrapper'>{options.map((linkData,index) => (
+            <li key = {index}>
                 <Link className = 'navbar-link' to = {linkData.linkTo} smooth = {true} offset = {-100} duration = {500}>{linkData.name}</Link>
             </li>
           ))}

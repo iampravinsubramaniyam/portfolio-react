@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import "../styles/project.css"
 import points from '../images/projects/points.png'
 import {projects} from '../data/data.js'
@@ -17,19 +17,17 @@ const Projects = () => {
     webkitBackdropFilter: "blur(6px)"
   }
 
-  useEffect(()=>{
-    if(projectInView){
-      projectStatus()
-    }
-  },[projectInView])
+  if(projectInView){
+    projectStatus()
+  }
 
 
   return (
     <div className='projects' id = 'projects' >
       <ul className="project-wraper" ref = {project} style={projectInView?blurryEffect:{}}>
-        {projects.map(data => (
+        {projects.map((data,index) => (
 
-          <li className='project-card' style={projectInView ? {transform:"translateX(0px)"}:{transform:"translateX(2000px)"}}>
+          <li key = {index} className='project-card' style={projectInView ? {transform:"translateX(0px)"}:{transform:"translateX(2000px)"}}>
             <img src={data.image} alt="" />
 
             <h1 >{data.name}</h1>
@@ -37,8 +35,8 @@ const Projects = () => {
 
             <ul className='tech-stack'>
               <p style={{color: "#6A9C89", whiteSpace: "nowrap"}}>Tech Stack</p>
-              {data.techStacks.map(e => (
-                <li >{e}</li>
+              {data.techStacks.map((e,index) => (
+                <li key = {index}>{e}</li>
               ))}
             </ul>
 

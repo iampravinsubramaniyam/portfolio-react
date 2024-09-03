@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import "../styles/navigationbar.css"
 import { FaHome } from "react-icons/fa";
 import { BiSolidUserDetail } from "react-icons/bi";
@@ -36,8 +36,8 @@ const Navigationbar = () => {
       ]
   return (
     <>
-        <ul className='navigationbar'>{optionData.map(linkData => (
-            <li>
+        <ul className='navigationbar'>{optionData.map((linkData,index) => (
+            <li key={index}>
                 <Link className = 'navigationbar-link' to = {linkData.linkTo} smooth = {true} offset = {-100} duration = {500}>{linkData.icon}</Link>
             </li>
             ))}

@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import "../styles/about.css"
-import {skills, bubbles} from '../data/data.js'
+import {skills} from '../data/data.js'
 import stone from "../images/about/wall.png"
 import {useInView} from 'framer-motion'
 import { useRef } from 'react'
@@ -17,13 +17,9 @@ const About = () => {
   const aboutContainer = useInView(about);
   const techSkills = useInView(tech);
 
-  useEffect(()=>{
-    if(aboutContainer){
-      aboutStatus();
-    }
-  },[aboutContainer])
-
-
+  if(aboutContainer){
+    aboutStatus();
+  }
 
 
   return (
@@ -48,8 +44,8 @@ const About = () => {
           <div className="tech-box">
           <h3 className = "skillSetHeading">Tech Stack</h3>
             <ul className='tech-skills-wraper' ref = {tech}>
-              {skills.map(skill => (
-                <li style={techSkills ? {width: "40px"} : {width: "0px"}}>
+              {skills.map((skill,index) => (
+                <li key = {index} style={techSkills ? {width: "40px"} : {width: "0px"}}>
                   <img src={skill.path} alt={skill.name} />
                 </li>
               ))}

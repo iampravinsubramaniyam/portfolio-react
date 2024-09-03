@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import "../styles/main.css"
 import sea from '../images/main/sea.png'
 import boat from '../images/main/boat.png'
@@ -18,11 +18,10 @@ const Main = () => {
   const home = useRef(null)
   const homeInView = useInView(home)
 
-  useEffect(()=>{
-    if(homeInView){
-      homeStatus();
-    }
-  },[homeInView])
+  if(homeInView){
+    homeStatus();
+  }
+
 
   return (
     <div className='main' id = "home">
