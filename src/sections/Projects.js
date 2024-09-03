@@ -14,7 +14,7 @@ const Projects = () => {
 
   const blurryEffect = {
     backdropFilter: "blur(6px)",
-    webkitBackdropFilter: "blur(6px)"
+    WebkitBackdropFilter: "blur(6px)"
   }
 
   if(projectInView){
