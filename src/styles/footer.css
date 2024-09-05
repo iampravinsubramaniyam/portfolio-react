@@ -1,13 +1,15 @@
 
 .footer{
     width: 100%;
-    min-height: 60vh;
+    min-height: 100vh;
     background-color: white;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     margin-top: 5vh;
-    margin-bottom: 5vh
+    margin-bottom: 5vh;
+
+    place-content: center;
 }
 
 

@@ -35,16 +35,7 @@
     justify-content: center;
 }
 
-.download-title{
-    position: absolute;
-    left: 35%;
-    top: 45%;
-    font-size: 14px;
-    color: #134B70;
-    cursor: pointer;
-    white-space: nowrap;
-    text-decoration: none;
-}
+
 
 .resume-cloud{
     width: 160px;
@@ -301,9 +292,7 @@
         height: 60px;
     }
 
-    .download-title{
-        left: 16%;
-    }
+
   }
 
   @media screen and (max-width: 576px){
