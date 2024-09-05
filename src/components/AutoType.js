@@ -1,15 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
-
 const AutoType = () => {
-
-    return (
+  return (
     <TypeAnimation
       sequence={[
-        // Same substring at the start will only be typed out once, initially
         'PraveenSubramaniyam',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        1000, // wait 1s before moving to the next text
         'Front-End Developer',
         1000,
         'Back-End Developer',
@@ -20,11 +17,14 @@ const AutoType = () => {
         1000
       ]}
       wrapper="span"
-      speed={5}
+      speed={60} 
+      deletionSpeed={30} 
+      cursor={true} 
+      cursorStyle="|" 
       style={{ fontSize: '1.2em', display: 'inline-block', color: 'rgb(14, 140, 157)', fontWeight: "500" }}
       repeat={Infinity}
     />
   );
-}
+};
 
-export default AutoType
+export default AutoType;
