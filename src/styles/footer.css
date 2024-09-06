@@ -42,7 +42,7 @@
     text-align: start;
     margin-bottom: 10px;
     font-weight: 400;
-    color: #58C5E8;
+    color: rgb(14, 140, 157);
     white-space: nowrap;
 }
 
@@ -97,7 +97,7 @@
 
 .contact-wraper h1{
     font-weight: 400;
-    color: #58C5E8;
+    color: rgb(14, 140, 157);
 }
 
 .contact-box{
