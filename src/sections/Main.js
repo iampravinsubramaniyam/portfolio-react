@@ -1,11 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import "../styles/main.css";
 import AutoType from '../components/AutoType';
-import LastUpdated from '../components/LastUpdated';
-
 import { useInView } from 'framer-motion';
 
-const Main = ({ setMainInView, sea, clouds, cloud, boat, wheel }) => {
+import sea from "../images/main/sea.png"
+import clouds from '../images/main/clouds.png';
+import cloud from '../images/main/cloud.png';
+import boat from '../images/main/boat.png';
+import WheelContainer from '../components/WheelContainer';
+import LastUpdated from '../components/LastUpdated';
+
+const Main = ({ setMainInView}) => {
   const main = useRef(null);
   const mainStatus = useInView(main);
 
@@ -13,17 +18,6 @@ const Main = ({ setMainInView, sea, clouds, cloud, boat, wheel }) => {
     setMainInView(mainStatus);
   }, [mainStatus, setMainInView]);
 
-  useEffect(()=>{
-
-    const seaImage = new Image();
-
-    seaImage.onload = ()=>{
-      console.log("complate")
-    }
-
-    seaImage.src = sea
-
-  },[sea,clouds,cloud,boat,wheel])
 
 
   return (
@@ -33,10 +27,7 @@ const Main = ({ setMainInView, sea, clouds, cloud, boat, wheel }) => {
         <div className="autospell">I'm <AutoType /></div>
       </div>
 
-      <div className="wheel-container" ref={main}>
-        <img className='wheel' src={wheel} alt="wheel" />
-        <LastUpdated />
-      </div>
+      <WheelContainer main = {main} content={<LastUpdated />}/>
 
       <div className="cloud-container">
         <div className="resume-container">

@@ -69,8 +69,6 @@
 }
 
 
-
-
 .tech-box{
     box-shadow: 1px 1px 5px #58C5E8;
     height: 60vh;
@@ -162,6 +160,7 @@
     z-index: 0;
     /* opacity: 0.6; */
 }
+
 .about-heading{
     letter-spacing: 2px;
     opacity: 0.6;
@@ -213,5 +212,4 @@
         padding: 20px;
         padding-right: 40px;
     }
-    
 }
