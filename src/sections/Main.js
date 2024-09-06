@@ -1,21 +1,29 @@
 import React, { useEffect, useRef } from 'react';
 import "../styles/main.css";
-import sea from '../images/main/sea.png';
-import boat from '../images/main/boat.png';
-import wheel from '../images/main/wheel.png';
 import AutoType from '../components/AutoType';
 import LastUpdated from '../components/LastUpdated';
-import clouds from '../images/main/clouds.png';
-import cloud from '../images/main/cloud.png';
+
 import { useInView } from 'framer-motion';
 
-const Main = ({ setMainInView }) => {
+const Main = ({ setMainInView, sea, clouds, cloud, boat, wheel }) => {
   const main = useRef(null);
   const mainStatus = useInView(main);
 
   useEffect(() => {
     setMainInView(mainStatus);
   }, [mainStatus, setMainInView]);
+
+  useEffect(()=>{
+
+    const seaImage = new Image();
+
+    seaImage.onload = ()=>{
+      console.log("complate")
+    }
+
+    seaImage.src = sea
+
+  },[sea,clouds,cloud,boat,wheel])
 
 
   return (

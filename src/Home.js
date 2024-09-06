@@ -9,6 +9,14 @@ import Footer from './sections/Footer'
 import Navigationbar from './components/Navigationbar'
 
 
+import sea from "./images/main/sea.png"
+import clouds from './images/main/clouds.png';
+import cloud from './images/main/cloud.png';
+import boat from './images/main/boat.png';
+import wheel from './images/main/wheel.png';
+
+
+
 const Home = () => {
 
   const [mainInView, setMainInView] = useState(true);
@@ -17,35 +25,18 @@ const Home = () => {
   const [projectInView, setProjectsInView] = useState(true);
   const [contactInView, setContactInView] = useState(true);
 
-  // const handleContact = () =>{
-  //   console.log("contact")
-  // }
-
-  // const setProjectsInView = (status) =>{
-  //   console.log(status)
-
-  // }
-
-  // const setProfilesInView = () =>{
-  //   console.log("profiles")
-
-  // }
-
-  // const setAboutInView = () =>{
-  //   console.log("about")
-
-  // }
-
-  // const setMainInView = () =>{
-  //   console.log("main")
-
-  // }
-
 
   return (
     <div className='home'>
           <Header/>
-          <Main setMainInView = {setMainInView}/>
+          <Main 
+            setMainInView = {setMainInView}
+            sea = {sea}
+            clouds = {clouds}
+            cloud = {cloud}
+            boat = {boat}
+            wheel = {wheel}
+          />
           <About setAboutInView = {setAboutInView}/>
           <Profiles setProfilesInView = {setProfilesInView}/>
           <Projects setProjectsInView = {setProjectsInView}/>
