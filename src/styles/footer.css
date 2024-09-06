@@ -1,12 +1,11 @@
 
 .footer{
     width: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
     background-color: white;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    margin-top: 5vh;
     margin-bottom: 5vh;
 
     place-content: center;
@@ -156,7 +155,7 @@
 @media screen and (max-width: 992px) {
     .footer{
         grid-template-columns: repeat(1,1fr);
-        row-gap: 45px;
+        row-gap: 60px;
         
     }
 
@@ -182,7 +181,8 @@
 
 @media screen and (max-width: 572px) {
     .footer{
-        margin-top: 5vh;
+        min-height: 60vh;
+        margin-top: 2vh;
         background-color: white;
 
         display: flex;

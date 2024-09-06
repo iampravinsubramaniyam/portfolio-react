@@ -71,7 +71,7 @@
 
 .tech-box{
     box-shadow: 1px 1px 5px #58C5E8;
-    height: 60vh;
+    height: 360px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -188,7 +188,7 @@
     }
 
     .tech-box{
-        height: 64vh;
+        height: 380px;
         width: 400px;
         padding: 20px;
         padding-left: 40px;

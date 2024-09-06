@@ -165,7 +165,7 @@
 
 @media screen and (max-width: 992px) {
     .profiles{
-        min-height: 120vh;
+        min-height: 100vh;
     }
     .profiles-container{
         grid-template-columns: repeat(1,1fr);
@@ -184,12 +184,19 @@
 }
 
 @media screen and (max-width: 772px){
+    .profiles{
+        min-height: 90vh;
+    }
     .achivement-wraper{
         margin-left: 40px;
     }
 }
 
 @media screen and (max-width: 478px) {
+
+    .profiles{
+        min-height: 80vh;
+    }
     
     .achivement-wraper h1{
         color: #19211e;
