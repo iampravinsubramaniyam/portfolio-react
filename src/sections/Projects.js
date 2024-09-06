@@ -29,11 +29,13 @@ const Projects = ({ setProjectsInView }) => {
             <img src={data.image} alt={`Screenshot of ${data.name}`} />
             <h1>{data.name}</h1>
             <div className="description">{data.desc}</div>
-            <ul className='tech-stack'>
+            <ul className='tech-stack-wraper'>
               <p style={{ color: "#6A9C89", whiteSpace: "nowrap" }}>Tech Stack</p>
-              {data.techStacks.map((tech, index) => (
-                <li key={index}>{tech}</li>
-              ))}
+              <div className="tech-stack">
+                {data.techStacks.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </div>
             </ul>
           </li>
         ))}

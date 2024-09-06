@@ -1,7 +1,7 @@
 
 .footer{
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: white;
     position: relative;
     display: grid;
@@ -45,6 +45,7 @@
     margin-bottom: 10px;
     font-weight: 400;
     color: #58C5E8;
+    white-space: nowrap;
 }
 
 .domain-box{
@@ -155,7 +156,8 @@
 @media screen and (max-width: 992px) {
     .footer{
         grid-template-columns: repeat(1,1fr);
-        row-gap: 50px;
+        row-gap: 45px;
+        
     }
 
     .domain-container{
@@ -180,10 +182,31 @@
 
 @media screen and (max-width: 572px) {
     .footer{
-        margin-top: 0vh;
+        margin-top: 5vh;
+        background-color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding-top: 30px;
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .domain-container{
+        align-items: start;
+        justify-content: space-around;
+        padding-left: 30px;
     }
     .domain-box{
         padding: 20px 0px;
+    }
+
+    .domain-wraper h1{
+        width: 100%;
+        font-size: 30px;
+        white-space: wrap;
     }
 
     .domain-name{

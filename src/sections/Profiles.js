@@ -11,6 +11,9 @@ const Profiles = ({setProfilesInView}) => {
   const profile = useRef(null)
   const profileStatus = useInView(profile);
 
+  const profileIcons = useRef(null)
+  const profileIconsStatus = useInView(profileIcons);
+
 
   useEffect(() => {
     setProfilesInView(profileStatus);
@@ -22,13 +25,13 @@ const Profiles = ({setProfilesInView}) => {
   return (
     <div className='profiles' id = 'profiles'>
 
-      <div className="profiles-container">
+      <div className="profiles-container"  ref = {profile}>
         <div className="profiles-wraper">
-            <ul className="myProfiles" ref = {profile}>
+            <ul className="myProfiles" ref={profileIcons}>
                 {profiles.map((profile,index) => (
                   <li 
                     key ={index}
-                    style={profileStatus? {top: "0px"}: {top: "120px"}}
+                    style={profileIconsStatus? {top: "0px"}: {top: "120px"}}
                     className="link-wraper">
                     <a href={profile.linkTo}>{profile.logo}</a>
                   </li>
