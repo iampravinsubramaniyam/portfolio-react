@@ -30,6 +30,7 @@
     align-items: flex-start;
     justify-content: space-around;
     overflow-Y: hidden ;
+    padding-top: 20px;
 }
 
 .link-wraper{
