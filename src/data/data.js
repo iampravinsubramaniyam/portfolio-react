@@ -321,7 +321,7 @@ const skills = [
     }
   ]
 
-  const achiements = ["300+ problems Solved in leetcode","Achieved 50 days and and 100 days batch in leetcode(2023)","Achieved 100 days batch in Leetcode(2024)","Achieved Css(Basic) certificate in Hacker Rank"]
+  const achiements = ["400+ DSA problems Solved in leetcode","Achieved 50 days and and 100 days batch in leetcode(2023)","Achieved 100 days batch in Leetcode(2024)","Achieved Css certificate in Hacker Rank"]
 
 
 
