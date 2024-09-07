@@ -11,6 +11,8 @@ import maven from "../images/about/skills/maven.png"
 import git from "../images/about/skills/git.png"
 import github from "../images/about/skills/github.png"
 import mysql from "../images/about/skills/mysql.png"
+import python from "../images/about/skills/python.png"
+
 import bubble from "../images/about/bubble.png"
 
 
@@ -120,6 +122,10 @@ const skills = [
     {
       name: "github",
       path: github
+    },
+    {
+      name: "python",
+      path: python
     }
   ]
 
