@@ -1,7 +1,7 @@
 
 .footer{
     width: 100%;
-    min-height: 80vh;
+    min-height: 90vh;
     background-color: white;
     position: relative;
     display: grid;
@@ -180,7 +180,7 @@
 
 @media screen and (max-width: 572px) {
     .footer{
-        min-height: 60vh;
+        min-height: 80vh;
         margin-top: 4vh;
         background-color: white;
 
