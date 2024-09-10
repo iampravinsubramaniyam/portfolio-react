@@ -1,15 +1,11 @@
-
-
-
-.main{
+.main {
     margin-top: 100px;
     width: 100%;
     height: 88vh;
     position: relative;
 }
 
-
-.cloud-container{
+.cloud-container {
     position: absolute;
     top: 10px;
     right: 100px;
@@ -21,12 +17,12 @@
     justify-content: center;
 }
 
-.cloud-container img{
+.cloud-container img {
     width: auto;
     height: 50%;
 }
 
-.resume-container{
+.resume-container {
     width: 300px;
     height: 50%;
     position: relative;
@@ -35,7 +31,7 @@
     justify-content: center;
 }
 
-.resume-indication{
+.resume-indication {
     position: absolute;
     height: 30px;
     width: 95px;
@@ -46,50 +42,42 @@
     border-radius: 50px;
     font-size: 12px;
     box-shadow: 1px 1px 2px rgba(14, 140, 157, 0.534);
-
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     color: rgb(14, 140, 157);
     font-weight: 400;
-
 }
 
-.resume-indicator{
-    width: 18px ;
+.resume-indicator {
+    width: 18px;
     height: 18px;
     position: relative;
     right: -5px;
     color: rgb(14, 140, 157);
     animation: move 1s ease infinite;
-  }
+}
 
-  @keyframes move {
-    0%{
-        right: -4px;
-    }50%{
-        right: -6px;
-    }100%{
-        right: -4px;
-    }
-    
-  }
+@keyframes move {
+    0% { right: -4px; }
+    50% { right: -6px; }
+    100% { right: -4px; }
+}
 
-
-.resume-cloud{
+.resume-cloud {
     width: 160px;
     height: 100px;
     position: relative;
     border-radius: 50px;
 }
 
-.resume-container a img{
+.resume-container a img {
     width: auto;
     height: 100%;
 }
 
-.wheel-container{
+.wheel-container {
     position: absolute;
     top: 10px;
     left: 100px;
@@ -101,79 +89,54 @@
     gap: 5px;
 }
 
-.wheel{
+.wheel {
     width: 140px;
     opacity: 0.4;
-
-    z-index:20;
-    animation:rotation 10s infinite linear;
+    z-index: 20;
+    animation: rotation 10s infinite linear;
 }
 
-@keyframes rotation{
-    from{
-        transform: rotate(0deg);
-    }to{
-        transform:rotate(360deg);
-    }
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-.boat{
+.boat {
     width: 20%;
     opacity: 0.5;
     position: absolute;
     bottom: 100px;
-    left:80px;
+    left: 80px;
     z-index: 2;
     transition: 2s;
     transform: rotate(0deg);
-    animation: swing 4s  infinite linear;
+    animation: swing 4s infinite linear;
 }
 
 @keyframes swing {
-    0%{
-        transform: rotate(0deg);
-        bottom: 100px;
-        left: 80px;
-    }25%{
-        transform: rotate(5deg);
-        bottom: 90px;
-        left: 85px;
-    }50%{
-        transform: rotate(0deg);
-        bottom: 80px;
-        left: 90px;
-    }75%{
-        transform: rotate(-5deg);
-        bottom: 90px;
-        left: 85px;
-    }100%{
-        transform: rotate(0deg);
-        bottom: 100px;
-        left: 80px;
-    }
+    0% { transform: rotate(0deg); bottom: 100px; left: 80px; }
+    25% { transform: rotate(5deg); bottom: 90px; left: 85px; }
+    50% { transform: rotate(0deg); bottom: 80px; left: 90px; }
+    75% { transform: rotate(-5deg); bottom: 90px; left: 85px; }
+    100% { transform: rotate(0deg); bottom: 100px; left: 80px; }
 }
 
-.sea{
+.sea {
     width: 100%;
     height: 230px;
     position: absolute;
     bottom: 0;
     left: 0;
-    animation: wave 4s  infinite linear;
+    animation: wave 4s infinite linear;
 }
 
 @keyframes wave {
-    0%{
-        height: 230px;
-    }50%{
-        height: 200px;
-    }100%{
-        height: 230px;
-    }
+    0% { height: 230px; }
+    50% { height: 200px; }
+    100% { height: 230px; }
 }
 
-
-.autospell-warper{
+.autospell-warper {
     width: 400px;
     height: 100px;
     position: absolute;
@@ -181,230 +144,153 @@
     bottom: 250px;
 }
 
-.autospell-warper h1{
+.autospell-warper h1 {
     opacity: 0.5;
     font-size: 24px;
     margin-bottom: 5px;
 }
 
-.autospell{
+.autospell {
     font-size: 18px;
 }
 
-
-
+/* Media Queries */
 
 @media screen and (max-width: 992px) {
-    .cloud-container{
-        right: 0px;
+    .cloud-container {
+        right: 0;
         width: 350px;
     }
 
-    .wheel-container{
-        left: 0px;
+    .wheel-container {
+        left: 0;
     }
 
-    .wheel{
+    .wheel {
         width: 100px;
     }
 
-    .boat{
-        left: 0px;
+    .boat {
+        left: 0;
         width: 22%;
     }
 
-    @keyframes swing {
-        0%{
-            transform: rotate(0deg);
-            bottom: 100px;
-            left: 125px;
-        }25%{
-            transform: rotate(8deg);
-            bottom: 90px;
-            left: 130px;
-        }50%{
-            transform: rotate(0deg);
-            bottom: 80px;
-            left: 135px;
-        }75%{
-            transform: rotate(-8deg);
-            bottom: 90px;
-            left: 130px;
-        }100%{
-            transform: rotate(0deg);
-            bottom: 100px;
-            left: 125px;
-        }
-    }
-
-    .autospell-warper{
+    .autospell-warper {
         bottom: 200px;
         left: 300px;
     }
 
-    .sea{
+    .sea {
         width: 150%;
+    }
+
+    @keyframes swing {
+        0% { transform: rotate(0deg); bottom: 100px; left: 125px; }
+        25% { transform: rotate(8deg); bottom: 90px; left: 130px; }
+        50% { transform: rotate(0deg); bottom: 80px; left: 135px; }
+        75% { transform: rotate(-8deg); bottom: 90px; left: 130px; }
+        100% { transform: rotate(0deg); bottom: 100px; left: 125px; }
     }
 }
 
-@media screen and (max-width: 770px){
-    .dolphin{
-        display: none;
-    }
+@media screen and (max-width: 770px) {
+    .dolphin { display: none; }
 
-    .wheel-container{
+    .wheel-container {
         width: 320px;
         left: 30px;
     }
 
-    .boat{
-        left: 0px;
+    .boat {
+        left: 0;
         width: 24%;
     }
 
-    .cloud-container{
-        right: 0px;
+    .cloud-container {
+        right: 0;
         width: 300px;
     }
 
-    @keyframes swing {
-        0%{
-            transform: rotate(0deg);
-            bottom: 100px;
-            left: 105px;
-        }25%{
-            transform: rotate(8deg);
-            bottom: 90px;
-            left: 110px;
-        }50%{
-            transform: rotate(0deg);
-            bottom: 80px;
-            left: 115px;
-        }75%{
-            transform: rotate(-8deg);
-            bottom: 90px;
-            left: 110px;
-        }100%{
-            transform: rotate(0deg);
-            bottom: 100px;
-            left: 105px;
-        }
-    }
-
-
-    .autospell-warper{
+    .autospell-warper {
         left: 320px;
         bottom: 150px;
     }
 
-    .resume-indication{
+    .resume-indication {
         left: -20%;
     }
 
-    
-  }
+    @keyframes swing {
+        0% { transform: rotate(0deg); bottom: 100px; left: 105px; }
+        25% { transform: rotate(8deg); bottom: 90px; left: 110px; }
+        50% { transform: rotate(0deg); bottom: 80px; left: 115px; }
+        75% { transform: rotate(-8deg); bottom: 90px; left: 110px; }
+        100% { transform: rotate(0deg); bottom: 100px; left: 105px; }
+    }
+}
 
-
-
-  @media screen and (max-width: 576px){
-    .wheel-container{
-        top: 0px;
-        left: 0px;
+@media screen and (max-width: 576px) {
+    .wheel-container {
+        top: 0;
+        left: 0;
         height: 180px;
     }
 
-    
-    .autospell-warper{
-        left: 200px;
-        bottom: 190px;
+    .autospell-warper {
+        left: 40px;
+        bottom: 240px;
     }
 
-    .sea{
+    .sea {
         left: -28%;
     }
 
-    .cloud-container{
+    .cloud-container {
         width: 200px;
         right: 10px;
-        top: -45px
-
+        top: -45px;
     }
 
-    .cloud-container img{
+    .cloud-container img {
         height: 25%;
     }
 
-    .resume-cloud{
+    .resume-cloud {
         width: 200px;
         height: 100px;
     }
 
-
-    .wheel{
+    .wheel {
         width: 80px;
     }
 
-    .autospell-warper{
-        left: 40px;
-        bottom: 260px;
-    }
-
-    .boat{
+    .boat {
         width: 180px;
     }
 
-    .sea{
-        left: -30%;
-    }
-
     @keyframes swing {
-        0%{
-            transform: rotate(0deg);
-            bottom: 80px;
-            left: 80px;
-        }25%{
-            transform: rotate(8deg);
-            left: 85px;
-            bottom: 85px;
-        }50%{
-            transform: rotate(0deg);
-            left: 75px;
-            bottom: 90px;
-        }75%{
-            transform: rotate(-8deg);
-            left: 80px;
-            bottom: 85px;
-        }100%{
-            transform: rotate(0deg);
-            left: 80px;
-            bottom: 80px;
-        }
-    }
-
-    .cloud-container{
-        right: 0px;
-        top: 5%;
+        0% { transform: rotate(0deg); bottom: 80px; left: 80px; }
+        25% { transform: rotate(8deg); left: 85px; bottom: 85px; }
+        50% { transform: rotate(0deg); left: 75px; bottom: 90px; }
+        75% { transform: rotate(-8deg); left: 80px; bottom: 85px; }
+        100% { transform: rotate(0deg); left: 80px; bottom: 80px; }
     }
 
     @keyframes wave {
-        0%{
-            height: 190px;
-        }50%{
-            height: 160px;
-        }100%{
-            height: 190px;
-        }
+        0% { height: 190px; }
+        50% { height: 160px; }
+        100% { height: 190px; }
     }
 
-    .cloud-container img:nth-child(2){
+    .cloud-container img:nth-child(2) {
         display: none;
     }
 
-    .wheel-container{
+    .wheel-container {
         height: 120px;
     }
 
-    .cloud-container{
+    .cloud-container {
         top: 80px;
     }
-  }
+}

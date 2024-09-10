@@ -5,10 +5,7 @@ import { useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 const Projects = ({ setProjectsInView }) => {
-  const blurryEffect = {
-    backdropFilter: "blur(6px)",
-    WebkitBackdropFilter: "blur(6px)"
-  };
+
 
   const project = useRef(null)
   const projectStatus = useInView(project);
@@ -19,13 +16,11 @@ const Projects = ({ setProjectsInView }) => {
 
   return (
     <div className='projects' id='projects'>
-      <ul className="project-wraper" ref={project} style={projectStatus ? blurryEffect : {}}>
+      <ul className={`project-wraper ${projectStatus?"blur-effect":""}`} ref={project} >
         {projects.map((data, index) => (
           <li
             key={index}
-            className='project-card'
-            style={projectStatus ? { transform: "translateX(0px)", transition: "transform 1s ease" } : { transform: "translateX(2000px)", transition: "transform 0.5s ease" }}
-          >
+            className={`project-card ${projectStatus?"show-projects":"hide-projects"}`}>
             <img src={data.image} alt={`Screenshot of ${data.name}`} />
             <h1>{data.name}</h1>
             <div className="description">{data.desc}</div>

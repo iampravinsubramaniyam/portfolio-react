@@ -29,7 +29,7 @@ const Footer = ({ setContactInView }) => {
           <h1>Contact Me</h1>
           <ul className="contact-box">
             {details.map((data, index) => (
-              <li key={index} style={contactStatus ? { top: "0px" } : { top: "80px" }}>
+              <li key={index} className= {`contact-link ${contactStatus?"show-contacts":"hide-contacts"}`}>
                 <a href={data.link} target='_blank' rel="noopener noreferrer">
                   {data.logo}
                 </a>

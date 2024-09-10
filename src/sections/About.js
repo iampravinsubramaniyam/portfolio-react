@@ -19,7 +19,7 @@ const About = ({ setAboutInView }) => {
     <div className='about' id='about' ref={about}>
       <div className="about-wraper">
         <div className="content">
-          <div className="about-heading" style={aboutStatus ? { width: "120px" } : { width: "0px" }}>About Me</div>
+          <div className= {`about-heading ${aboutStatus ? "show-about-heading":"hide-about-heading"}`}>About Me</div>
           <p className="para">
             Hey!<br /><br />
             I am a recent graduate with a strong foundation in computer science and engineering. My expertise lies in programming languages such as C and C++, where I have honed my skills in algorithm design and data structures. Additionally, I am proficient in web development technologies, including HTML, CSS, and JavaScript, allowing me to create dynamic and responsive web applications. I also have experience with React for building user interfaces and Java with Spring Boot, Hibernate, and JPA for backend development. My knowledge extends to database management with MySQL, enabling me to design and manage robust data systems.
@@ -33,7 +33,7 @@ const About = ({ setAboutInView }) => {
             <h3 className="skillSetHeading">Tech Stack</h3>
             <ul className='tech-skills-wraper' ref={tech}>
               {skills.map((skill, index) => (
-                <li key={index} style={techStatus ? { width: "40px" } : { width: "0px" }}>
+                <li key={index}  className = {`techskills ${techStatus?"show-tech-status" : "hide-tech-status"}`}>
                   <img src={skill.path} alt={skill.name} />
                 </li>
               ))}

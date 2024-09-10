@@ -3,8 +3,6 @@ import './App.css';
 import Home from './Home.js';
 import Loading from './components/Loading.js';
 
-
-
 function App() {
 
   const [loading,setLoading] = useState(true);

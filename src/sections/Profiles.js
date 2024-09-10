@@ -31,15 +31,14 @@ const Profiles = ({setProfilesInView}) => {
                 {profiles.map((profile,index) => (
                   <li 
                     key ={index}
-                    style={profileIconsStatus? {top: "0px"}: {top: "120px"}}
-                    className="link-wraper">
+                    className = {`link-wraper ${profileIconsStatus? "show-profiles":"hide-profiles"}`}>
                     <a href={profile.linkTo}>{profile.logo}</a>
                   </li>
                 ))}
             </ul>
         </div>
 
-        <div className="achivement-wraper" style={profileStatus? {transform: "translateX(0px)"}: {transform: "translateX(200px)"}}>
+        <div className={`achivement-wraper ${profileStatus ? "show-achivement": "hide-achiement"}`}>
               <h1>Achivements</h1>
               <ul className="achivement-content">
                   {achiements.map((data,index) => (

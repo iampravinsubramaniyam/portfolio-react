@@ -72,7 +72,7 @@
 }
 
 .domain-name:hover{
-    color: #58C5E8;
+    color: rgb(14, 140, 157);
     border: 0.1px solid lightslategray;
     cursor: pointer;
 }
@@ -112,7 +112,7 @@
 }
 
 
-.contact-box li{
+.contact-link{
     list-style: none;
     width: 40px;
     height: 40px;
@@ -147,9 +147,17 @@
 }
 
 .logo:hover{
-    color: #58C5E8;
+    color: rgb(14, 140, 157);
 }
 
+
+.show-contacts{
+    top: 0px;
+}
+
+.hide-contacts{
+    top: 80px;
+}
 
 @media screen and (max-width: 992px) {
     .footer{
