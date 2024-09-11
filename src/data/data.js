@@ -7,6 +7,7 @@ import { FaJava } from "react-icons/fa";
 import { SiMysql, SiSpringsecurity } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
+import { TbBrandJavascript } from "react-icons/tb";
 
 
 import bubble from "../images/about/bubble.png"
@@ -94,7 +95,7 @@ const skills = [
     },    
     {
       name: "js",
-      icon: <FaJs  style={techIconStyle}/>
+      icon: <TbBrandJavascript  style={techIconStyle}/>
     },    
     {
       name: "react",
