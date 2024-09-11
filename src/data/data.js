@@ -71,7 +71,6 @@ const options = [
 const techIconStyle = {
   width: "70%",
   height: "70%",
-  borderRadius: "50%",
   transition: "1s",
   opacity: "0.8"
 }
