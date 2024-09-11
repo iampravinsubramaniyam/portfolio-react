@@ -34,7 +34,8 @@ const About = ({ setAboutInView }) => {
             <ul className='tech-skills-wraper' ref={tech}>
               {skills.map((skill, index) => (
                 <li key={index}  className = {`techskills ${techStatus?"show-tech-status" : "hide-tech-status"}`}>
-                  <img src={skill.path} alt={skill.name} />
+                  {/* <img src={skill.path} alt={skill.name} /> */}
+                  {skill.icon}
                 </li>
               ))}
             </ul>

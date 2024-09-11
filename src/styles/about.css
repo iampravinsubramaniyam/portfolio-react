@@ -92,11 +92,6 @@
     justify-content: center;
 }
 
-.tech-skills-wraper li img {
-    width: 70%;
-    border-radius: 50%;
-    transition: 1s;
-}
 
 .about-heading{
     white-space: nowrap;
@@ -136,6 +131,7 @@
 .tech-skills-wraper li:nth-child(12) { transition-delay: 1.2s; }
 .tech-skills-wraper li:nth-child(13) { transition-delay: 1.0s; }
 .tech-skills-wraper li:nth-child(14) { transition-delay: 0.8s; }
+.tech-skills-wraper li:nth-child(15) { transition-delay: 1.2s; }
 
 .stone-wall {
     width: 100%;

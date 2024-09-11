@@ -1,17 +1,13 @@
-import c from "../images/about/skills/c.png"
-import cpp from "../images/about/skills/cpp.png"
-import html from "../images/about/skills/html.png"
-import css from "../images/about/skills/css.png"
-import js from "../images/about/skills/js.png"
-import react from "../images/about/skills/react.png"
-import java from "../images/about/skills/java.png"
-import springboot from "../images/about/skills/springboot.png"
-import hibernate from "../images/about/skills/hibernate.png"
-import maven from "../images/about/skills/maven.png"
-import git from "../images/about/skills/git.png"
-import github from "../images/about/skills/github.png"
-import mysql from "../images/about/skills/mysql.png"
-import python from "../images/about/skills/python.png"
+
+
+import { TbBrandComedyCentral } from "react-icons/tb";
+import { TbBrandCpp } from "react-icons/tb";
+import { RiReactjsLine } from "react-icons/ri";
+import { FaJava } from "react-icons/fa";
+import { SiMysql, SiSpringsecurity } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+
 
 import bubble from "../images/about/bubble.png"
 
@@ -45,6 +41,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
+import React from "react";
 
 
 /**********   Navbar  ************** */
@@ -70,62 +67,74 @@ const options = [
 
 
 /**********   About    ********** */
+const techIconStyle = {
+  width: "70%",
+  height: "70%",
+  borderRadius: "50%",
+  transition: "1s",
+  opacity: "0.8"
+}
 const skills = [
     {
       name: "C",
-      path: c
+      icon: <TbBrandComedyCentral style={techIconStyle}/>
     },
     {
       name: "C++",
-      path: cpp
+      icon: <TbBrandCpp style={techIconStyle} />
+
     },    
     {
       name: "html",
-      path: html
+      icon: <FaHtml5  style={techIconStyle}/>
     },    
     {
       name: "Css",
-      path: css
+      icon: <FaCss3Alt  style={techIconStyle}/>
     },    
     {
       name: "js",
-      path: js
+      icon: <FaJs  style={techIconStyle}/>
     },    
     {
       name: "react",
-      path: react
+      icon: <RiReactjsLine  style={techIconStyle}/>
     },    
     {
       name: "java",
-      path: java
+      icon: <FaJava  style={techIconStyle}/>
     },   
     {
       name: "springboot",
-      path: springboot
+      icon: <SiSpringboot  style={techIconStyle}/>
     },   
     {
       name: "hibernate",
-      path: hibernate
+      icon: <SiHibernate  style={techIconStyle}/>
     },    
     {
       name: "maven",
-      path: maven
+      icon: <SiApachemaven  style={techIconStyle}/>
     },
     {
       name: "mysql",
-      path: mysql
+      icon: <SiMysql  style={techIconStyle}/>
     },
     {
       name: "git",
-      path: git
+      icon: <FaGitAlt  style={techIconStyle}/>
     },
     {
       name: "github",
-      path: github
+      icon: <FaGithub  style={techIconStyle}/>
     },
     {
       name: "python",
-      path: python
+      icon: <FaPython  style={techIconStyle}/>
+    },
+    {
+      name: "springsecurity",
+      icon: <SiSpringsecurity  style={techIconStyle}/>
     }
   ]
 
