@@ -113,6 +113,16 @@
     animation: swing 4s infinite linear;
 }
 
+/* main.css */
+
+/* Blur effect while loading */
+.blur {
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
+}
+  
+  /* Add any other styles as needed */
+  
 @keyframes swing {
     0% { transform: rotate(0deg); bottom: 100px; left: 80px; }
     25% { transform: rotate(5deg); bottom: 90px; left: 85px; }

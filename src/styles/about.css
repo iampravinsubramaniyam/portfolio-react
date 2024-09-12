@@ -148,6 +148,14 @@
     transition: 2s;
 }
 
+.blur {
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
+  }
+  
+  .loaded {
+    filter: blur(0);
+  }
 /* Media Queries */
 @media screen and (max-width: 992px) {
     .about-wraper {
