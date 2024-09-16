@@ -8,8 +8,6 @@ import Projects from './sections/Projects'
 import Footer from './sections/Footer'
 import Navigationbar from './components/Navigationbar'
 
-
-
 const Home = () => {
 
   const [mainInView, setMainInView] = useState(true);
@@ -20,7 +18,7 @@ const Home = () => {
 
   useEffect(()=>{
     const setTitle = () =>{
-      document.title = mainInView? "Praveen.Fl | Home": aboutInView? "Praveen.Fl | About":profilesInView?"Praveen.Fl | Profiles" : projectInView ? "Praveen.Fl | Projects": "Praveen.Fl | Contact";
+      document.title = `Praveen.Fl | ${mainInView? "Home": aboutInView? "About":profilesInView?"Profiles" : projectInView ? "Projects": "Contact"}`;
     }
 
     setTitle();

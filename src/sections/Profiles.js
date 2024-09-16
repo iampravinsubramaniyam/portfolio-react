@@ -19,9 +19,6 @@ const Profiles = ({setProfilesInView}) => {
     setProfilesInView(profileStatus);
   }, [profileStatus, setProfilesInView]);
 
-
-
-
   return (
     <div className='profiles' id = 'profiles'>
 
@@ -50,6 +47,7 @@ const Profiles = ({setProfilesInView}) => {
 
       <img className = 'mountain' src={mountain} alt="" />
       <h1 className='profiles-heading'>Profiles<div className='hider' style={profileStatus ? {left: "120%"}: {left: "0%"}}></div></h1>
+
     </div>
   )
 }

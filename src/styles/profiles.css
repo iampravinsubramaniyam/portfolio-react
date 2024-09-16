@@ -1,7 +1,7 @@
 /* General Styles */
 .profiles {
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -160,6 +160,7 @@
 .hide-profiles{
     top: 120px;
 }   
+
 
 /* Media Queries */
 @media screen and (max-width: 992px) {

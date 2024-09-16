@@ -6,7 +6,6 @@ import { useEffect, useRef } from 'react';
 
 const Projects = ({ setProjectsInView }) => {
 
-
   const project = useRef(null)
   const projectStatus = useInView(project);
 
@@ -35,6 +34,7 @@ const Projects = ({ setProjectsInView }) => {
           </li>
         ))}
       </ul>
+
       <img className='back-image' src={points} alt="Decorative points background" />
       <h1 className='projects-title'>Projects</h1>
     </div>
