@@ -310,7 +310,7 @@ const skills = [
   const profiles = [
     {
       name: "leetcode",
-      linkTo: "https://www.instagram.com/pravin.fl/",
+      linkTo: "https://leetcode.com/u/iampravin/",
       logo: <SiLeetcode className='link-logo'/>
     },
     {
