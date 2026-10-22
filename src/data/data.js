@@ -1,7 +1,3 @@
-
-
-import { TbBrandComedyCentral } from "react-icons/tb";
-import { TbBrandCpp } from "react-icons/tb";
 import { RiReactjsLine } from "react-icons/ri";
 import { FaJava } from "react-icons/fa";
 import { SiMysql, SiSpringsecurity } from "react-icons/si";
@@ -42,7 +38,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
-import React from "react";
 
 import { SiC, SiCplusplus, SiTailwindcss, SiSap, SiSpring,
   SiCloudfoundry, SiPostman, SiIntellijidea, 
@@ -54,7 +49,7 @@ import { VscVscode } from "react-icons/vsc";
 
 import { SiTypescript, SiRedux, SiMicrosoftazure, SiGithubactions } from "react-icons/si";
 import { TbBrandReactNative, TbSql } from "react-icons/tb";
-import { FaBitbucket, FaLinux, FaServer, FaDatabase } from "react-icons/fa";
+import { FaBitbucket, FaLinux, FaDatabase } from "react-icons/fa";
 
 
 /**********   Navbar  ************** */
