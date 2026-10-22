@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(()=>{
     const setTitle = () =>{
-      document.title = `Praveen.Fl | ${mainInView? "Home": aboutInView? "About":profilesInView?"Profiles" : projectInView ? "Projects": "Contact"}`;
+      document.title = `Praveen | ${mainInView? "Home": aboutInView? "About":profilesInView?"Profiles" : projectInView ? "Projects": "Contact"}`;
     }
 
     setTitle();
