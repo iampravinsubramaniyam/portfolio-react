@@ -21,6 +21,7 @@ const Home = () => {
       document.title = `Praveen | ${mainInView? "Home": aboutInView? "About":profilesInView?"Profiles" : projectInView ? "Projects": "Contact"}`;
     }
 
+    
     setTitle();
 
   },[mainInView,aboutInView,profilesInView,projectInView,contactInView])
