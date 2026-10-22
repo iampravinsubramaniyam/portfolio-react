@@ -6,6 +6,10 @@ import { skillCategories } from '../data/data.js';
 import stone from "../images/about/wall.png";
 import BubblesAnimation from '../components/BubblesAnimation.js';
 
+import { SiGmail } from "react-icons/si";
+import { FaPhoneAlt } from "react-icons/fa";
+
+
 const About = ({ setAboutInView }) => {
   const tech = useRef(null);
   const about = useRef(null);
@@ -25,16 +29,36 @@ const About = ({ setAboutInView }) => {
           <div className={`about-heading ${aboutStatus ? "show-about-heading" : "hide-about-heading"}`}>
             About Me
           </div>
-     <p className="para">
-        Hey!<br /><br />
-        I'm a Java Full Stack Developer with 2+ years of professional experience building and shipping 10+ production-grade applications using React, Redux, TypeScript, Java, Spring Boot, and SQL. Since September 2024, I've been working at BAPS Consulting in Coimbatore, where I own the full software lifecycle: UI design, RESTful API development, deployment, and production support.
-        <br /><br />
-        I build responsive, state-driven frontends with React, TypeScript, and Tailwind CSS, backed by Spring Boot, JPA/Hibernate, and well-tuned SQL schemas. I also manage Linux server deployments, monitoring, and backups, and I've kept a bug-free production record while handling multiple projects at the same time.
-        <br /><br />
-        Alongside my core Java full stack work, I also develop SAP Fiori/UI5 applications, integrate SAP Build workflows, and deploy on SAP BTP.
-        <br /><br />
-        I'm looking for a role where I can keep building scalable, user-focused applications, learn from experienced engineers, and take on bigger ownership.
-      </p>
+<p className="para">
+  Hey!<br /><br />
+  I'm a <strong className="highlight">Java Full Stack Developer</strong> with <strong className="highlight">2+ years of professional experience</strong> building and shipping <strong className="highlight">10+ production-grade applications</strong> using <strong className="highlight">React, Redux, TypeScript, Java, Spring Boot,</strong> and <strong className="highlight">SQL</strong>. Since September 2024, I've been working at BAPS Consulting in Coimbatore, where I own the full software lifecycle: UI design, RESTful API development, deployment, and production support.
+  <br /><br />
+  I build responsive, state-driven frontends with <strong className="highlight">React, TypeScript, and Tailwind CSS</strong>, backed by <strong className="highlight">Spring Boot, JPA/Hibernate</strong>, and well-tuned SQL schemas. I also manage <strong className="highlight">Linux server</strong> deployments, monitoring, and backups, and I've kept a <strong className="highlight">bug-free production record</strong> while handling multiple projects at the same time.
+  <br /><br />
+  Alongside my core Java full stack work, I also develop <strong className="highlight">SAP Fiori/UI5</strong> applications, integrate SAP Build workflows, and deploy on <strong className="highlight">SAP BTP</strong>.
+  <br /><br />
+  I enjoy building scalable, user-focused applications, learning new technologies, and sharing what I learn. Feel free to reach out if you'd like to talk tech, collaborate, or connect.
+
+  
+</p>
+
+<div className={`about-contact ${aboutStatus ? "contact-animate" : ""}`}>
+  <span className="about-contact-label">Let's Connect !!</span>
+  <br></br>
+
+  <div className="splitLine"></div>
+
+  <a className="about-mail" href="tel:+919384929320">
+    <FaPhoneAlt className="about-phone-icon" />
+    +91 93849 29320
+  </a>
+  <a className="about-mail" href="mailto:pravinsubramaniyam@gmail.com">
+    <SiGmail className="about-mail-icon" />
+    pravinsubramaniyam@gmail.com
+  </a>
+</div>
+
+
         </div>
 
       <div className="tech-skills-container">

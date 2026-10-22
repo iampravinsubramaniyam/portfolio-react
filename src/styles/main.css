@@ -242,7 +242,7 @@
 @media screen and (max-width: 576px) {
     .wheel-container {
         top: 0;
-        left: 0;
+        left: 20px;
         height: 180px;
     }
 
