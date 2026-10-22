@@ -22,6 +22,7 @@ const Home = () => {
     }
 
     setTitle();
+    
 
   },[mainInView,aboutInView,profilesInView,projectInView,contactInView])
 
