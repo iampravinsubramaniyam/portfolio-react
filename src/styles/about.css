@@ -352,8 +352,11 @@
 }
 
 /* entrance: plays each time the About section scrolls into view */
+
 .contact-animate {
-    animation: contactFadeUp 0.7s ease both;
+    animation:
+        contactFadeUp 0.7s ease both,
+        navyFill 1.2s ease 0.1s backwards;
 }
 
 .contact-animate .about-contact-label {
@@ -397,4 +400,9 @@
     .about-mail:hover .about-mail-icon {
         animation: none;
     }
+}
+
+@keyframes navyFill {
+    from { background-color: transparent; }
+    to   { background-color: navy; }
 }
