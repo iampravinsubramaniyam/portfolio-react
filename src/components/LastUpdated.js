@@ -6,8 +6,8 @@ const LastUpdated = () => {
     return (
         <TypeAnimation
           sequence={[
-            '@Last Updated 2024',
-            1000, 
+            '@Last Updated 2026-10-22 02:50:00 UTC',
+            1000,
           ]}
           wrapper="span"
           speed={5}

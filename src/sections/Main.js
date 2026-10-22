@@ -10,7 +10,8 @@ import boat from '../images/main/boat.png';
 import WheelContainer from '../components/WheelContainer';
 import LastUpdated from '../components/LastUpdated';
 import { FaCaretRight } from "react-icons/fa";
-import resume from "../resume/PRAVEEN S (BTECH - IT)- RESUME.pdf";
+
+import RESUME_URL from '../config/resume';
 
 const Main = ({ setMainInView }) => {
   const [isSeaLoaded, setSeaLoaded] = useState(false);
@@ -36,11 +37,16 @@ const Main = ({ setMainInView }) => {
 
       <div className="cloud-container">
         <div className="resume-container">
-          <a className='resume-cloud' href={resume} download>
+          <a
+            className="resume-cloud"
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={cloud}
               alt="Download CV"
-              className={!isCloudLoaded ? 'blur' : ''}
+              className={!isCloudLoaded ? "blur" : ""}
               onLoad={() => setCloudLoaded(true)}
             />
           </a>

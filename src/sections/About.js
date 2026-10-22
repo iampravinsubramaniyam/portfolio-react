@@ -1,7 +1,8 @@
 import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
 import "../styles/about.css";
-import { skills } from '../data/data.js';
+
+import { skillCategories } from '../data/data.js';
 import stone from "../images/about/wall.png";
 import BubblesAnimation from '../components/BubblesAnimation.js';
 
@@ -24,30 +25,41 @@ const About = ({ setAboutInView }) => {
           <div className={`about-heading ${aboutStatus ? "show-about-heading" : "hide-about-heading"}`}>
             About Me
           </div>
-          <p className="para">
-            Hey!<br /><br />
-            I am a recent graduate with a strong foundation in computer science and engineering. My expertise lies in programming languages such as C and C++, where I have honed my skills in algorithm design and data structures. Additionally, I am proficient in web development technologies, including HTML, CSS, and JavaScript, allowing me to create dynamic and responsive web applications. I also have experience with React for building user interfaces and Java with Spring Boot, Hibernate, and JPA for backend development. My knowledge extends to database management with MySQL, enabling me to design and manage robust data systems.
-            <br /><br />
-            I'm excited to bring my knowledge and energy to an organization. Looking for a dynamic position where I can use my academic background, pick the brains of seasoned experts, and actively support the company's expansion.
-          </p>
+     <p className="para">
+        Hey!<br /><br />
+        I'm a Java Full Stack Developer with 2+ years of professional experience building and shipping 10+ production-grade applications using React, Redux, TypeScript, Java, Spring Boot, and SQL. Since September 2024, I've been working at BAPS Consulting in Coimbatore, where I own the full software lifecycle: UI design, RESTful API development, deployment, and production support.
+        <br /><br />
+        I build responsive, state-driven frontends with React, TypeScript, and Tailwind CSS, backed by Spring Boot, JPA/Hibernate, and well-tuned SQL schemas. I also manage Linux server deployments, monitoring, and backups, and I've kept a bug-free production record while handling multiple projects at the same time.
+        <br /><br />
+        Alongside my core Java full stack work, I also develop SAP Fiori/UI5 applications, integrate SAP Build workflows, and deploy on SAP BTP.
+        <br /><br />
+        I'm looking for a role where I can keep building scalable, user-focused applications, learn from experienced engineers, and take on bigger ownership.
+      </p>
         </div>
 
-        <div className="tech-skills-container">
-          <div className="tech-box">
-            <h3 className="skillSetHeading">Tech Stack</h3>
-            <ul className='tech-skills-wraper' ref={tech}>
-              {skills.map((skill, index) => (
-                <li
-                  key={index}
-                  className={`techskills ${techStatus ? "show-tech-status" : "hide-tech-status"}`}
-                >
-                  {/* Render skill icon */}
-                  {skill.icon}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <div className="tech-skills-container">
+  <div className="tech-box" ref={tech}>
+    <h3 className="skillSetHeading">Technical Skills</h3>
+
+    {skillCategories.map((category, catIndex) => (
+      <div className="skill-category" key={category.title}>
+        <h4 className="skill-category-title">{category.title}</h4>
+        <ul className="skill-list">
+          {category.skills.map((skill, index) => (
+            <li
+              key={skill.name}
+              className={`skill-chip ${techStatus ? "show-chip" : "hide-chip"}`}
+              style={{ transitionDelay: `${catIndex * 0.15 + index * 0.05}s` }}
+            >
+              {skill.icon}
+              <span>{skill.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</div>
       </div>
 
       <img

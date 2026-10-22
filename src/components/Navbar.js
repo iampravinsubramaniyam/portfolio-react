@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <Link className = 'logo' style = {{color:"rgb(14, 140, 157)", cursor: "pointer"}} to = "home" smooth = {true} offset = {-100} duration = {500}>Praveen.Fl</Link>
+      <Link className = 'logo' style = {{color:"rgb(14, 140, 157)", cursor: "pointer"}} to = "home" smooth = {true} offset = {-100} duration = {500}>Praveen</Link>
       <ul className='navbar-link-container'>{options.map((linkData,index) => (
         <li key = {index}>
             <Link className = 'navbar-link' to = {linkData.linkTo} smooth = {true} offset = {-100} duration = {500}>{linkData.name}</Link>
